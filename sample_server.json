@@ -1,0 +1,10 @@
+[
+    {
+        "server": "web",
+        "host" : "localhost",
+        "port": "8893",
+        "logpath": "~/phpMongo/web.log",
+        "docroot": "~/phpMongo/Application/",
+        "index" : "main.php"
+    }
+]

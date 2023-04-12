@@ -1,0 +1,18 @@
+{
+    "Application": "sample",
+    "WebServer": {
+        "server": "web",
+        "host": "localhost",
+        "port": "8700",
+        "logfolder": "./Log",
+        "index": "sample.php"
+    },
+    "DB": {
+        "server": "sql",
+        "host": "localhost",
+        "port": "1433",
+        "usermname": "root",
+        "password": "root",
+        "logfolder": "./Log"
+    }
+}

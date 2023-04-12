@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@{ echo "$_->title"; }@</title>
+    </head>
+
+    <body> 
+        @{
+            echo "this is a example body code\n";
+            print("write php codes\n");
+        }@
+    </body>
+</html>
