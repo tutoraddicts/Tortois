@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"bytes"
 	"embed"
 	"encoding/json"
 	"fmt"
@@ -72,17 +71,9 @@ func RunCommand(command string, argument ...string) {
 	//  Run the App_setup.php file with arguments
 	cmd := exec.Command(command, argument...)
 	// Buffers to capture output and error
-	var outBuf, errBuf bytes.Buffer
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	err := cmd.Run()
-
-	if err != nil {
-		fmt.Printf("Error:\n %s\n", errBuf.String())
-	}
-
-	// Print the output
-	fmt.Printf("Output: %s\n", outBuf.String())
+	cmd.Run()
 }
 
 func GetFromJson(content []byte) *map[string]any {
