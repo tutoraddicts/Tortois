@@ -1,9 +1,0 @@
-
-<?php
-class {{ModelTableName}} extends DB
-{
-    public ${{ModelTableName}} = array(
-        "{{ModelTableName}}_name" => "VARCHAR(30)",
-    );
-}
-

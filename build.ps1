@@ -84,7 +84,7 @@ function BuildGo() {
     go mod init torotis
     go mod tidy
     Write-log -massage "Buidling the Go Application"
-    go build -o tortois.exe
+    go build -o InstallTortois.exe
     # Write-log -massage "Executing the Go Application"
     # ./tortois.exe
 }
