@@ -109,6 +109,15 @@ func main() {
 				Application.StartServer(arg[1])
 			}
 			break
+		case "-build":
+			var Application = NewApplication("")
+			if Application == nil {
+				fmt.Printf("Error: \nSomething Went wront not able to create Application Object\n")
+				return
+			}
+
+			Application.Build()
+			break
 		default:
 			fmt.Printf("Warning : No arugment has been passed hence no operation to do")
 			break

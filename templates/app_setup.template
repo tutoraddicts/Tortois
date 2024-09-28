@@ -47,12 +47,6 @@ if ($argc > 1) {
             case "-help":
                 print_help();
                 break;
-            case "-new_controller":
-                CreateController($argv[++$i]);
-                break;
-            case "-remove_controller":
-                RemoveController($argv[++$i]);
-                break;
             case "-create_db_table":
                 CreateDBTable($argv[++$i]);
                 break;
@@ -493,11 +487,13 @@ function build(): void
     }
 
     deleteDirectory("$build_dir/.tempviews");
+    deleteDirectory("$build_dir/app_setup.php");
+
 
     //  Change Build Flag
-    $config = json_decode(file_get_contents("$build_dir/config.json"), false);
+    $config = json_decode(file_get_contents("$build_dir/Server.Config.json"), false);
     $config->build = true;
-    file_put_contents("$build_dir/config.json", json_encode($config));
+    file_put_contents("$build_dir/Server.Config.json", json_encode($config));
 
 }
 

@@ -211,3 +211,9 @@ func (a *Application) StartServer(port string) {
 	RunCommand("php", "./app_setup.php", "-start", port)
 	a.DeleteAppSetupFile()
 }
+
+func (a *Application) Build() {
+	a.CreateAppSetupFile()
+	a.RunAppSetup("-build")
+	a.DeleteAppSetupFile()
+}

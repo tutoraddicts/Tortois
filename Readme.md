@@ -48,7 +48,7 @@ The script checks the command-line arguments using a for loop and performs actio
 - **Usage:** `-CreateController=newcontroller`
 - **Example:**
   ```bash
-  .\tortois.exe -CreateController=newcontroller\
+  .\tortois.exe -CreateController=newcontroller
   ```
 
 ### `-RemoveController=<controller_name>`
